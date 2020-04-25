@@ -7,7 +7,7 @@ const app = express();
 
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
-
+app.use(cors());
 
 app.get('/products', (req, res, next) => {
     res.json(database.getProducts()) //convert to JSON
