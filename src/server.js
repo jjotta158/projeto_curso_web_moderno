@@ -22,6 +22,10 @@ app.post('/addProduct', (req,res) => {
     res.send(database.saveProduct(req.body))
 })
 
+app.post('/deleteProduct', (req, res) => {
+    res.send(database.deleteProduct(req.body.idProduct))
+})
+
 app.listen(port, () => {
     console.log(`Server is runnig in port: ${port}`)    
 })

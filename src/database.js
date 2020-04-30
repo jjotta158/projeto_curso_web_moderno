@@ -23,5 +23,11 @@ function getProducts() {
     return products
 }
 
+function deleteProduct(id_product) {
+    const product = products[id_product]
+    delete products[id];
+    return product
+}
 
-module.exports = {saveProduct, getProductById, getProducts}
+
+module.exports = {saveProduct, getProductById, getProducts, deleteProduct}
